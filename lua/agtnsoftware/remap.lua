@@ -1,6 +1,6 @@
 
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "-", vim.cmd.Ex)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -55,4 +55,20 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+
+
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.wo.number = true  -- Set line numbers
+vim.wo.relativenumber = true  -- Enable relative line numbers
+vim.o.tabstop = 4  -- Set tab width
+vim.o.shiftwidth = 4  -- Set indentation width
+vim.o.expandtab = true  -- Convert tabs to spaces
+vim.g.mapleader = " "
+vim.opt.clipboard = "unnamedplus"  -- Use the system clipboard
+vim.opt.incsearch = true
+vim.opt.updatetime = 50
+vim.opt.colorcolumn = "80"
+vim.opt.termguicolors = true
+vim.opt.scrolloff = 8
 

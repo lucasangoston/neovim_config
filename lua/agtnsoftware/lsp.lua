@@ -3,7 +3,7 @@ require("mason").setup()
 
 -- Configuration de Mason LSPconfig pour s'assurer que les serveurs sont installés
 require("mason-lspconfig").setup({
-    ensure_installed = { "lua_ls", "rust_analyzer", "tsserver", "jdtls", "gopls" }
+    ensure_installed = { "lua_ls", "rust_analyzer", "jdtls", "gopls", "ts_ls" }
 })
 
 -- Fonction pour attacher les keymaps à chaque serveur
@@ -42,11 +42,6 @@ lspconfig.lua_ls.setup({
 
 -- Configuration pour rust_analyzer
 lspconfig.rust_analyzer.setup({
-    on_attach = on_attach,
-})
-
--- Configuration pour tsserver (TypeScript)
-lspconfig.tsserver.setup({
     on_attach = on_attach,
 })
 
