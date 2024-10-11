@@ -34,7 +34,7 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
-
+vim.keymap.set('n', '=', 'gg=G``', { noremap = true })
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
@@ -71,4 +71,4 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
-
+vim.opt.laststatus = 3
